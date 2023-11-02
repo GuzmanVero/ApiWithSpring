@@ -1,20 +1,21 @@
 package com.unicaes.TheBBQPlace.persistence;
 
-import com.unicaes.TheBBQPlace.persistence.crud.ClienteCrudRepository;
-import com.unicaes.TheBBQPlace.persistence.entity.ClienteEntity;
+import com.unicaes.TheBBQPlace.persistence.crud.ClientCrudRepository;
+import com.unicaes.TheBBQPlace.persistence.entity.ClientEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.Optional;
 @Repository
-public class ClienteRepository {
+public class ClientRepositorio {
     @Autowired
-    private ClienteCrudRepository clienteCrudRepositorio;
+    private ClientCrudRepository clientCrudRepository;
 
-    public List<ClienteEntity> gellAll(){
-        return (List<ClienteEntity>) clienteCrudRepositorio.findAll();
+    public ClientEntity save(ClientEntity client) {
+        return clientCrudRepository.save(client);
     }
-    public List<ClienteEntity> getBycliente(int idCliente){
-        return clienteCrudRepositorio.findByIdClienteOrderByNombreAsc(idCliente);
+
+    public ClientEntity getId(int clientId){
+        return clientCrudRepository.findById(clientId);
     }
 }
