@@ -16,6 +16,7 @@ public class TableEntity {
 
     @Column(name = "nombre_mesa")
     private String name;
-
+    
+    @Column(name = "capacidad")
     private Integer capacity;
 }
