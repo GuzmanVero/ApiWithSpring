@@ -5,15 +5,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "mesa")
+@Table(name = "mesas")
 @Getter
 @Setter
-public class MenuEntity {
+public class TableEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_menu")
-    private Integer idMenu;
-    private Integer nombre;
-    private String descripcion;
-    private double precio;
+    @Column(name = "mesa_id")
+    private Integer idMesa;
+
+    @Column(name = "nombre_mesa")
+    private String mesa;
+
+    private Integer capacidad;
 }
