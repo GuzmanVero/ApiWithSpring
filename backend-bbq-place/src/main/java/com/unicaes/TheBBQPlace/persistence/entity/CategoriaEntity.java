@@ -8,11 +8,13 @@ import lombok.Setter;
 @Table(name = "categoria")
 @Getter
 @Setter
-public class CategoriaEntity {
+public class CategoryEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_categoria")
-    private Integer idCategoria;
-    private Integer nombre;
-    private String descripcion;
+    @Column(name = "categoria_id")
+    private Integer categoryId;
+
+    @Column(name = "nombre_categoria")
+    private String name;
 }
