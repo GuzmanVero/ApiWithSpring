@@ -5,19 +5,28 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "clientes")
 @Getter
 @Setter
-public class ClienteEntity {
+public class ClientEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name= "id_cliente")
-    private Integer idCliente;
-    //Como no se cambiara el nombre de la tabla se queda igual
-    private String nombre;
-    private String apellido;
-    private String telefono;
-    private String correo;
-    private String contraseña;
+    @Column(name = "cliente_id")
+    private Integer clientId;
 
+    @Column(name = "nombres")
+    private String name;
+
+    @Column(name = "apellidos")
+    private String lastname;
+
+    @Column(name = "correo")
+    private String email;
+
+    @Column(name = "numero_telefono")
+    private String cellphone;
+
+    @Column(name = "contrasenia")
+    private String password;
 }
