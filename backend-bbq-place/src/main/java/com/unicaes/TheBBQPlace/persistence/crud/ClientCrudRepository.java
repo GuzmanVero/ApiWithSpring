@@ -9,6 +9,6 @@ public interface ClientCrudRepository extends CrudRepository<ClientEntity, Integ
     
     ClientEntity findById(int clientId);
 
-    List<ClientEntity> findByIdClienteOrderByNombreAsc(int clientId);
+    ClientEntity findByEmail(String email);
 
 }
