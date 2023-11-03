@@ -29,4 +29,7 @@ public class ClientEntity {
 
     @Column(name = "contrasenia")
     private String password;
+
+    @Column(name = "rol")
+    private String rol;
 }
