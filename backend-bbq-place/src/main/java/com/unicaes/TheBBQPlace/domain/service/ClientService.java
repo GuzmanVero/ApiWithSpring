@@ -17,4 +17,8 @@ public class ClientService {
     public ClientEntity getId(int clientId) {
         return clientCrudRepository.findById(clientId);
     }
+
+    public ClientEntity login(String email){
+        return clientCrudRepository.findByEmail(email);
+    }
 }
