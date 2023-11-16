@@ -11,6 +11,10 @@ public class ClientService {
     private ClientCrudRepository clientCrudRepository;
 
     public ClientEntity save(ClientEntity client) {
+        if (client.getRol() == null || client.getRol().isEmpty()) {
+            client.setRol("CUSTOMER");
+        }
+        client.setPassword(passwordEncoder.encode(client.getPassword()));
         return clientCrudRepository.save(client);
     }
 
@@ -18,7 +22,7 @@ public class ClientService {
         return clientCrudRepository.findById(clientId);
     }
 
-    public ClientEntity login(String email){
+    public ClientEntity getprofile(String email){
         return clientCrudRepository.findByEmail(email);
     }
 }
