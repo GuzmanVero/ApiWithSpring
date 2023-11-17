@@ -11,12 +11,15 @@ import lombok.Setter;
 public class TableEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "mesa_id")
+    @Column(name = "id_mesa")
     private Integer tableId;
 
     @Column(name = "nombre_mesa")
     private String name;
-    
+
     @Column(name = "capacidad")
     private Integer capacity;
+
+    @Column(name = "id_cliente")
+    private  Integer idClient;
 }
