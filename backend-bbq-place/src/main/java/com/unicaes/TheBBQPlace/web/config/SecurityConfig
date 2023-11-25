@@ -35,6 +35,8 @@ public class SecurityConfig {
                 .requestMatchers("/user/login/info").permitAll()
                 .requestMatchers(HttpMethod.POST, "/user/signup").permitAll()
                 .requestMatchers(HttpMethod.GET, "/user/{id}").hasAnyRole("ADMIN")
+                .requestMatchers("/reserve/create").permitAll()
+                .requestMatchers(HttpMethod.GET, "/table/find").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
