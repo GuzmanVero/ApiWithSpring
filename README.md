@@ -19,8 +19,9 @@ This project is still in progress since there are still some details missing, su
 - IDE (IntelliJ IDEA)
 - Database manager (Postgresql)
 
-#### Results in postman
+## Results in postman
 
+#### Sing up 
 ```http
   http://localhost:8090/reserva/api/user/signup
 ```
@@ -28,3 +29,13 @@ This project is still in progress since there are still some details missing, su
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `name, rol, emai, cellphone, password` | `JSON` |  create user |
+
+
+#### Log in 
+```http
+  http://localhost:8090/reserva/api/user/login
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `emai, password` | `JSON` |  Login |
