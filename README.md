@@ -7,15 +7,24 @@ This project is still in progress since there are still some details missing, su
 
 ## What can you do?
 
- - create a user.
- - log in.
- - view your reservations.
- - create reservations.
- - update or delete reservations.
+ - Create a user.
+ - Log in.
+ - View your reservations.
+ - Create reservations.
+ - Update or delete reservations.
 
-## necessary tools 
+## Necessary tools 
 
 - Java 17
 - IDE (IntelliJ IDEA)
 - Database manager (Postgresql)
 
+#### Results in postman
+
+```http
+  http://localhost:8090/reserva/api/user/signup
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name, rol, emai, cellphone, password` | `JSON` |  create user |
