@@ -13,9 +13,9 @@ This project is still in progress since there are still some details missing, su
  - create reservations.
  - update or delete reservations.
 
-## herramientas necesarias 
+## necessary tools 
 
 - Java 17
-- IDE  (IntelliJ IDEA)
-- gestor de bases de datos (Postgresql)
+- IDE (IntelliJ IDEA)
+- Database manager (Postgresql)
 
