@@ -30,6 +30,18 @@ This project is still in progress since there are still some details missing, su
 | :-------- | :------- | :------------------------- |
 | `name, rol, emai, cellphone, password` | `JSON` |  create user |
 
+Result
+
+```bash
+  {
+    "clientId": 48,
+    "name": "your_name",
+    "email": "your_email@gmail.com",
+    "cellphone": "xxxxxxxxx",
+    "password": "$2a$10$WzZ/nCjOtQM/OUq3OSUSc..v1lzp61OiqdNwVCGcCL.400gBXn1GO",
+    "rol": "Costum"
+}
+```
 
 #### Log in 
 ```http
@@ -39,3 +51,13 @@ This project is still in progress since there are still some details missing, su
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `emai, password` | `JSON` |  Login |
+
+Result
+
+```bash
+  {
+    "message": "Login exitoso",
+    "email": "your_email@gmail.com",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ5b3VyX2VtYWlsQGdtYWlsLmNvbSIsImlzcyI6IlRoZUJicVBsYWNlIiwiaWF0IjoxNzA0NzU2MDQxLCJleHAiOjE3MDYwNTIwNDF9.2vduEaP2APGqTSQyDFLX3wwezlhizx5Shww1ca4YXAg"
+}
+```
